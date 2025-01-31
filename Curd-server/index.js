@@ -36,9 +36,15 @@ async function run() {
     const database = client.db('CURD-OPARATION');
     const userColection = database.collection('users');
     // userColection.insertMany(users)
-    console.log(
-      "Pinged your deployment. You successfully connected to MongoDB!"
-    );
+    app.get('/users',async (req, res) => {
+      const cursor =  userColection.find({});
+      const users = await cursor.toArray()
+      res.send(users)
+    })
+    // console.log(
+    //   "Pinged your deployment. You successfully connected to MongoDB!"
+    // );
+   
   } finally {
   
   }

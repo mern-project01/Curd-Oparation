@@ -1,18 +1,19 @@
 import React from "react";
 
 const Add_Curd = () => {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const form = event.target;
-        const name = form.name.value;
-        const profesion = form.profesion.value;
-        const email = form.email.value;
-        const user = {
-            name,
-            profesion,
-            email,
-        };
-    }
+   
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const profesion = form.profesion.value;
+    const email = form.email.value;
+    const user = {
+      name,
+      profesion,
+      email,
+    };
+  };
   return (
     <div>
       <div className="hero bg-base-200 min-h-screen">
