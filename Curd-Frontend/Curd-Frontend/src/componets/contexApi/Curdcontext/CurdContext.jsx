@@ -6,9 +6,10 @@ const CurdContext = ({ children }) => {
        fetch("http://localhost:5000/users")
          .then((res) => res.json())
          .then((data) => setUsers(data));
-     }, []);
+     }, [users]);
   const CurdInfo = {
-     users,
+    users,
+    setUsers,
   };
   return (
     <CardContex.Provider value={CurdInfo}> {children} </CardContex.Provider>
