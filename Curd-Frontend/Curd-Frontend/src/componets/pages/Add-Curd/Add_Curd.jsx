@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CardContex } from "../../contexApi/Curdcontext/CurdContext";
+
+
 
 const Add_Curd = () => {
-   
+  
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
